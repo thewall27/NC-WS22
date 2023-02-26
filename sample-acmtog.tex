@@ -1,0 +1,269 @@
+%%
+%% This is file `sample-acmtog.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `acmtog')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-acmtog.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[acmtog]{acmart}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
+
+%% NOTE that a single column version is required for 
+%% submission and peer review. This can be done by changing
+%% the \doucmentclass[...]{acmart} in this template to 
+%% \documentclass[manuscript,screen]{acmart}
+%% 
+%% To ensure 100% compatibility, please check the white list of
+%% approved LaTeX packages to be used with the Master Article Template at
+%% https://www.acm.org/publications/taps/whitelist-of-latex-packages 
+%% before creating your document. The white list page provides 
+%% information on how to submit additional LaTeX packages for 
+%% review and adoption.
+%% Fonts used in the template cannot be substituted; margin 
+%% adjustments are not allowed.
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+
+%%
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+\citestyle{acmauthoryear}
+
+\usepackage{cleveref}
+\usepackage{graphicx}
+
+%%%% end of the preamble, start of the body of the document source.
+\begin{document}
+% \settopmatter{printacmref=false}
+% \setcopyright{none}
+% \renewcommand\footnotetextcopyrightpermission[1]{}
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Human Activity Classification using MHEALTH Dataset}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+\author{Dhavalkumar Bharatkumar Limbachiya}
+\email{sut23dil@rhrk.uni-kl.com}
+\author{Eshwar Shashikumar Sastry}
+\email{tyv13sit@rhrk.uni-kl.com}
+\affiliation{%
+  \institution{RPTU Kaiserslautern-Landau}
+  \country{Germany}
+}
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+ Human-centred computing is an emerging branch of technology that seeks to design and develop technologies that prioritize the experience of the users. It seeks to achieve a goal of improving the human lives by enhancing the abilities of humans and their capabilities and thereby improving the quality of life. It helps understand human behaviour using computer systems. One of the most recent and effective applications of this is to use this to sense human motions using wearable sensors and gather information about human actions. In the context of this dataset, we discuss the recordings of 10 subjects performing everyday actions while carrying body-mounted wearable sensors. The wearable sensors are used to capture the required readings that are used further to classify the human actions.
+\end{abstract}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+Wearable technology is becoming more and more common. Various devices such as fitness bands, mobile phones come with built in sensors in them. These can be used to track various kinds of human activities. This information can be critical in building and technical equipment in the field of predicting healthcare, elder care, military applications and much more. In this paper, we understand the process to classify the sensor data into such multiple classes defining various human activities. This paper compares the multiple ways we can use this sensor data to build effective classification mechanisms using different Machine Learning classifiers and determining the most effective approach that helps predict and classify human actions on one of the major human activity datasets – MHEALTH Dataset
+
+\section{METHODOLOGY}
+\subsection{DATASET}
+The MHEALTH (Mobile HEALTH) dataset is a valuable resource for researchers and healthcare professionals. It consists of comprehensive recordings of body motion and vital signs for 10 individuals of diverse backgrounds, who were monitored while performing a variety of 12 physical activities. The data was collected using advanced wearable sensors, specifically Shimmer2, which were attached to the chest, wrist, and ankle. These sensors were designed to measure the acceleration, rate of turn, and magnetic field orientation of different body parts. Additionally, the chest sensor was equipped with 2-lead ECG measurements, which can be used to monitor heart activity and detect arrhythmias or examine the effects of exercise. The main advantage of having and working on this data was because this dataset consisted of clean data and contained no null values. It can be observed from \cref{fig:dataset_rep1}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{figures/dataset_rep1.png}
+    \caption{Figure depicting non null values of data}
+    \label{fig:dataset_rep1}
+ \end{figure}
+Also, subject wise re-sampling was not necessary in our case as all the data collected from each subject contributed equally towards our analysis (see \cref{fig:subjects_graph}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/subjects_graph.png}
+    \caption{Figure depicting contribution of each subject}
+    \label{fig:subjects_graph}
+ \end{figure}
+
+As stated above the dataset consisted of the subjects performing 12 activities. So the data collected had 12 labels/ categories of activities represented by the respective label classes as follows (see \cref{fig:labels}):
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{figures/labels.png}
+    \caption{Figure depicting the activity label in MHEALTH dataset}
+    \label{fig:labels}
+ \end{figure}
+As a part of the analysis and model building process, We are mainly using acceleration and gyroscope sensor data for the classification of the given activity. The \cref{fig:nothing} depicts the plot of acceleration values noted by the left ankle and right arm sensors for a particular participant when they were doing nothing.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/nothing.png}
+    \caption{Figure depicting the acceleration values for activity-"Nothing"}
+    \label{fig:nothing}
+ \end{figure}
+The \cref{fig:walking} depicts the plot of the acceleration parameter as noted by the left ankle and the right arm sensors when the participant was walking.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/walking.png}
+    \caption{Figure depicting the acceleration values for activity-"Walking"}
+    \label{fig:walking}
+ \end{figure}
+Similarly, the \cref{fig:climbing_stairs} depicts the values collected by the sensors when the participant was asked to climb stairs.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/climbing_stairs.png}
+    \caption{Figure depicting the acceleration values for activity-"Climbing Stairs"}
+    \label{fig:climbing_stairs}
+ \end{figure}
+
+These plots help us better understand the patterns in the observed readings for various corresponding user activities. It can be observed that the values of acceleration recorded by the sensors were much higher when the person was doing a dynamic activity as compared to doing nothing or for a stationary/ static activity.
+
+\subsection{PRE-PROCESSING THE DATA}
+An exploratory data analysis was performed to check data distribution and balance between data points. We observed that the data was highly unbalanced based on activity performed by subjects. The class 0 (Activity= “Nothing”) had a lot of data points in the dataset as compared to the other classes of activities. Moreover, class 12 (Activity = ‘Jump front \& back(20x)’ has least data points.(see \cref{fig:activities_count})
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{figures/activities_count.png}
+    \caption{Figure depicting data points of each activity}
+    \label{fig:activities_count}
+ \end{figure}
+The below bar plot depicts the class imbalance-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/activities_graph.png}
+    \caption{Figure depicting class imbalance amongst activities}
+    \label{fig:activities_graph}
+ \end{figure}
+So, we re-sample the dataset based on activity value counts. We down sampled the dataset to remove the class imbalance such that the activity label 0 had around 40k values (like that of the other classes). The below plot of the re-sampled data helps demonstrate the down sampled dataset (see \cref{fig:scaleddown_activities_graph}). 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/scaleddown_activities_graph.png}
+    \caption{Figure depicting resampled data plot}
+    \label{fig:scaleddown_activities_graph}
+ \end{figure}
+In order to handle the outliers in data, the features lying outside the 98 percent confidence interval were dropped. A StandardScalar component is used to normalize the data to bring them to the same approximations before passing them to the various classifiers for classifying the data
+
+\subsection{MODELING}
+For human activity classification, we performed experiments using machine learning based algorithms like Logistic Regression, Random Forest, k-Nearest Neighbour, Decision Tree \& CNN based approach using 1D CNN network. The pre-processed data needs to be split into train and test sets. For this we are using a leave a participant out approach. In our train set, we have data points from subject 1 till subject 8 and the test set has data points for subject 9 and 10. These train and test sets are only used for training and analysing ML based models. For the 1D CNN based model, we create a time series based train and test sets- using the above mentioned “leave a participant out” approach, with time steps of 100 and sliding window size of 50.
+To summarize, we have two sets of train and test set i.e. One train-test set for ML based model and one time series-based train-test set for CNN based approach. In order to evaluate the model performance, we consider F1 Scores as it is a good blend of precision and recall and overall, a good metric for evaluating unbalanced data. 
+
+The architecture of the CNN used in our study is shown below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{figures/cnn_architecture.png}
+    \caption{1-D CNN Model Summary}
+    \label{fig:cnn_architecture}
+ \end{figure}
+
+\subsection{RESULTS}
+\begin{table}
+  \caption{Comparison of performance of models}
+  \label{tab:freq}
+  \begin{tabular}{ccl}
+    \toprule
+    Model & F1 Score\\
+    \midrule
+    Logistic Regression & 52.0487\\
+    Random forest & 43.821\\
+    kNN & 50.137\\
+    Decision Tree & 48.438\\
+    1-D CNN & 88.397\\
+  \bottomrule
+\end{tabular}
+\end{table}
+The F1 scores obtained (see \cref{tab:freq}) from the various classification approaches can be seen in the above table. The \cref{fig:cnn_confusion_matrix} represents the confusion matrix obtained from the CNN based approach of classifying the data. As it can be observed, the CNN based model provided the best classification for our problem as compared to the other approaches although the activity “Lying down” is confused for the activity “Climbing Stairs” by the model. It has to be further noted that models can be optimized further if statistical features are considered for model training and inference. Performing an additional step of feature engineering could perhaps yield better results and help overcome the limitation explained above. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.85]{figures/cnn_confusion_matrix.png}
+    \caption{Figure depicting Confusion matrix of 1-D CNN mode}
+    \label{fig:cnn_confusion_matrix}
+ \end{figure}
+
+\section{CONCLUSION}
+This study aims at implementing different Machine Learning classification models on the publicly available dataset, MHEALTH, for the purpose of human activity detection. The dataset was pre-processed, scaled and normalised. Multiple Machine Learning models were trained for activity detection and their performances were compared on this dataset. It was observed that the CNN model performed better as compared to the other classification techniques used in our study. As future work, we plan to implement feature engineering practices and implement Deep Learning models like Recurrent Neural Network for activity and human behaviour prediction.
+
+\section{REFERENCES}
+Banos, O., Garcia, R., Holgado, J. A., Damas, M., Pomares, H., Rojas, I., Saez, A., Villalonga, C. mHealthDroid: a novel framework for agile development of mobile health applications. Proceedings of the 6th International Work-conference on Ambient Assisted Living an Active Ageing (IWAAL 2014), Belfast, Northern Ireland, December 2-5, (2014).
+
+Banos, O., Villalonga, C., Garcia, R., Saez, A., Damas, M., Holgado, J. A., Lee, S., Pomares, H., Rojas, I. Design, implementation and validation of a novel open framework for agile development of mobile health applications. BioMedical Engineering OnLine, vol. 14, no. S2:S6, pp. 1-20 (2015).
+
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-acmtog.tex'.
